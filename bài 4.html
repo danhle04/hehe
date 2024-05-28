@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h1>Quản lý điện thoại</h1>
+
+<button onclick="addPhone()">Thêm điện thoại</button>
+<button onclick="displayPhones()">Hiển thị danh sách</button>
+
+<script>
+    class Phone {
+        constructor(ma, ten, hang, gia) {
+            this.ma = ma;
+            this.ten = ten;
+            this.hang = hang;
+            this.gia = gia;
+        }
+
+        get getMa() {
+            return this.ma;
+        }
+
+        set setMa(ma) {
+            this.ma = ma;
+        }
+
+        get getTen() {
+            return this.ten;
+        }
+
+        set setTen(ten) {
+            this.ten = ten;
+        }
+
+        get getHang() {
+            return this.hang;
+        }
+
+        set setHang(hang) {
+            this.hang = hang;
+        }
+
+        get getGia() {
+            return this.gia;
+        }
+
+        set setGia(gia) {
+            this.gia = gia;
+        }
+        toString() {
+            return `Mã điện thoại: ${this._ma}, Tên: ${this.ten}, Hãng sản xuất: ${this._hangSanXuat}, Giá: ${this._gia}`;
+        }
+    }
+
+    class PhoneManager {
+        constructor() {
+            this.phoneList = [];
+        }
+
+        addPhone(phone) {
+            this.phoneList.push(phone);
+        }
+
+        ]
+</script>
+
+<div id="phone-list"></div>
+</body>
+</html>

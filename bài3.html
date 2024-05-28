@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    function snt(c) {
+        if (c <= 1)
+            return false;
+        for (let i = 2; i <= Math.sqrt(c); i++) {
+            if (c % i === 0)
+                return false;
+        }
+        return true;
+    }
+
+    let a = [];
+    let b = +prompt('nhập');
+    for (let i = 0; i < b; i++) {
+        let num = +prompt(`Nhập ${i + 1}: `);
+        a.push(num);
+    }
+    document.write('[' + a + ']' + "<br>");
+    let check = a.filter(snt);
+    check.sort((a, b) => a - b);
+    if (check.length > 0) {
+        document.write("[" + check + "]");
+    }
+
+</script>
+</body>
+</html>

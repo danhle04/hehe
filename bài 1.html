@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = +prompt("Nhập: ");
+    let evenSum = 0;
+    let oddSum = 0;
+    let evenNumbers = [];
+    let oddNumbers = [];
+
+    if (b <= 20) {
+
+        for (let i = 0; i < b; i++) {
+            let num = +prompt(`Nhập ${i + 1}: `);
+            a.push(num);
+            if (num % 2 === 0) {
+                evenSum += num;
+                evenNumbers.push(num);
+            } else {
+                oddSum += num;
+                oddNumbers.push(num);
+            }
+        }
+
+
+        document.write('[' + a + ']' + "<br>");
+
+
+        let result = evenSum - oddSum;
+
+
+        document.write(`(${evenNumbers.join('+')})-(${oddNumbers.join('+')}) = ${result}`);
+    } else {
+        alert("Lỗi!");
+    }
+</script>
+</body>
+</html>

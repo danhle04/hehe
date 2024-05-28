@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let b = prompt('nhập');
+    let c = 0;
+    for (let i = 0; i < b; i++) {
+        let num = prompt(`Nhập ${i + 1}: `);
+        a.push(num);
+    }
+    document.write('"' + a + '"' + "<br>");
+    for (let i = 0; i < a.length; i++) {
+        if (/[A-Z]/.test(a[i])) {
+            c += 1;
+        }
+
+    }
+    if (c > 0) {
+        document.write(c);
+    } else {
+        document.write("The Strings is not contai upper char");
+    }
+</script>
+</body>
+</html>
